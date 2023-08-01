@@ -1,60 +1,138 @@
-@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-body{
-    font-family: 'Roboto';
-    color: #282832;
+.navbar {
+  background-color: #C6D6D6;
+  height: 80px; /* Altura ideal da navbar */
+  display: flex;
+  justify-content: space-between; /* Distribuir os elementos horizontalmente */
+  align-items: center; /* Centralizar verticalmente */
+  color: #282832;
+  padding: 0 30px; /* Espaçamento ideal para a borda (aumentado) */
 }
 
-
-
-nav {
-    background-color: #dee7e7;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 13vh;
+.logo {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 24px;
+  font-weight: 300;
+  margin-right: 30px; /* Espaçamento para separar a logo dos itens de navegação (aumentado) */
 }
 
-nav ul{
-    list-style: none;
+.nav-items {
+  display: flex;
+  align-items: center; /* Centralizar verticalmente os itens de navegação */
 }
 
-.logo{
-    font-family: 'Kaushan Script';
-    font-size: 24px;
-    font-weight: bold;
-    color: #282832;
+.nav-item {
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px; /* Adicionando espaçamento interno aos itens de navegação */
 }
 
-a{
-    text-decoration: none ;
+.nav-item:first-child {
+  margin-left: 0; /* Remover o espaçamento para o primeiro item */
 }
 
-nav ul li{
-    display: inline-block;
+/* Estilo para os itens "Home" e "Sobre" */
+.nav-item:nth-child(2) {
+  color: #282832; /* Cor #282832 para o item "Home" */
 }
 
-nav ul li a{
-    color: #61617B;
-    font-size: 18px;
-    padding: 10px 20px;
-    border-radius: 30px;
-    transition: 0.5s;
+.nav-item:nth-child(3) {
+  color: #282832; /* Cor #282832 para o item "Sobre" */
 }
 
-nav ul li a:hover{
-    background-color: #a92727;
-    color: white;
+/* Texto de boas-vindas centralizado na parte superior */
+.welcome-text {
+  text-align: center;
+  margin-top: 30px;
 }
 
+.welcome-text h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
 
+/* Layout em duas colunas */
+.container {
+  display: flex;
+}
 
+.left-column {
+  flex: 1; /* Ocupa 1/2 do espaço disponível (50% da largura) */
+  padding: 20px; /* Adiciona espaçamento interno */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.right-column {
+  flex: 1; /* Ocupa 1/2 do espaço disponível (50% da largura) */
+  padding: 20px; /* Adiciona espaçamento interno */
+}
 
+/* Estilo para o texto adicional centralizado */
+.main-text {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.main-text p {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Estilo para a frase abaixo do texto */
+.additional-text {
+  font-family: 'Crimson Text', serif;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Estilo para o botão "Comece agora" */
+.start-button {
+  display: inline-block;
+  background-color: #A92727;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: normal;
+  padding: 10px 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+/* Estilo para a div que centraliza o botão com o texto */
+.button-wrapper {
+  text-align: center;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .nav-items {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-item {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  /* Responsividade para o layout em duas colunas */
+  .container {
+    flex-direction: column;
+  }
+
+  .left-column, .right-column {
+    padding: 20px;
+  }
+}
