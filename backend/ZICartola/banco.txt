@@ -1,0 +1,6 @@
+create table posts(id int primary key auto_increment, url_imagem varchar(255) not null, id_user integer not null);   
+create table users (id integer primary key auto_increment, name varchar(255) not null, password varchar(255) not null);
+alter table posts add foreign key(id_user) references users(id);                                         
+
+
+
