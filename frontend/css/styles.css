@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  background-color: #C6D6D6;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #282832;
+  padding: 0 30px;
+}
+
+.logo {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 24px;
+  font-weight: 300;
+  margin-right: 30px;
+}
+
+.nav-items {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+}
+
+.nav-item:first-child {
+  margin-left: 0;
+}
+
+.nav-item:nth-child(2),
+.nav-item:nth-child(3) {
+  color: #282832;
+}
+
+.welcome-text {
+  font-family: "Crimson Text";
+  text-align: center;
+  margin-top: 30px;
+}
+
+.welcome-text h1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+}
+
+.left-column,
+.right-column {
+  flex: 1;
+  padding: 20px;
+}
+
+.left-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-text p {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'Crimson Text', serif;
+}
+
+.additional-text {
+  font-family: 'Crimson Text', serif;
+  font-size: 18px;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.start-button {
+  display: inline-block;
+  background-color: #A92727;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-weight: normal;
+  padding: 10px 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.button-wrapper {
+  text-align: center;
+}
+
+/* Adicionando borda na imagem */
+.right-column img {
+  border: 2px solid #282832; /* Borda outside com 2 pixels de largura e cor #282832 */
+  border-radius: 16px; /* Raio de 16 pixels */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .nav-items {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-item {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    padding: 20px;
+  }
+}
