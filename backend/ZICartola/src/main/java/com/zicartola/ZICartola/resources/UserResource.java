@@ -18,14 +18,13 @@ import com.zicartola.ZICartola.entites.User;
 import com.zicartola.ZICartola.services.UserService;
 
 @RestController
-@RequestMapping(value = "/users")
+@RequestMapping("/users")
 public class UserResource {
 	
 	@Autowired
 	private UserService userService;
 	
-	@GetMapping
-	@RequestMapping(value = "/{id}")
+	@GetMapping("/{id}")
 	public ResponseEntity<UserDTO> findById(@PathVariable Long id) {
 		UserDTO userDTO = userService.findById(id);
 		return ResponseEntity.ok().body(userDTO);
