@@ -12,6 +12,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "tb_users")
@@ -19,7 +20,9 @@ public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@NotBlank
 	private String name;
+	@NotBlank
 	private String password;
 	
 	@JsonIgnore
@@ -28,6 +31,11 @@ public class User {
 
 	public User() {
 
+	}
+	
+	public User(String name, String password) {
+		this.name = name;
+		this.password = password;
 	}
 
 	public User(Long id, String name, String password) {
